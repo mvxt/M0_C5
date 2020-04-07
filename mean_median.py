@@ -1,9 +1,5 @@
 # M0_C5 - Mean, Median
 
-def prune(scores):
-    # Write your code here
-    return "not implemented"
-
 def mean(scores):
     # Write your code here
     return "not implemented"
@@ -14,11 +10,10 @@ def median(scores):
 
 if __name__ == '__main__':
     scores = input("Input list of test scores, space-separated: ")
-    raw_list = scores.split()
-    pruned_list = prune(raw_list)
+    scores_list = scores.split()
 
-    mean = mean(pruned_list)
-    median = median(pruned_list)
+    mean = mean(scores_list)
+    median = median(scores_list)
 
     print(f"Mean: {mean}")
     print(f"Median: {median}")
