@@ -9,7 +9,7 @@ As a teacher, you're tired of manually calculating the median and mean test scor
 
 ### Your Task
 - The `mean(test_scores)` function should return the average of all valid test scores.
-- The `median(test_scores)` function return the median score in the list of valid test scores.
+- The `median(test_scores)` function should return the median score of valid test scores.
 - If there are no valid test scores, return `-1` for both functions. 
 
 The output and input have been written for you. Your only focus is to implement the two functions.
