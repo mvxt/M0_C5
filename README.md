@@ -5,7 +5,7 @@ Repository with prompt and code for Module 1, Challenge 5: Mean and Median.
 As a teacher, you're tired of manually calculating the median and mean test scores for your class. You decide to write a program that does this for you based on values you input. As a reminder:
 
 - **Mean**: The average of all test scores, taken by summing all elements and then dividing by the total number of elements.
-- **Median**: The middle score. For example, if I have three scores `[1, 23, 83]`, the median score would be 23. If there are an even number of elements `[1, 23, 64, 83]`, the median will be the average of the two middle elements `(23 + 64) / 2 = 43`.
+- **Median**: The middle score. For example, if I have three scores `[1, 23, 83]`, the median score would be 23. If there are an even number of elements `[1, 23, 64, 83]`, the median will be the average of the two middle elements `(23 + 64) / 2 = 43.5`.
 
 ### Your Task
 - The `mean(test_scores)` function should return the average of all valid test scores.
