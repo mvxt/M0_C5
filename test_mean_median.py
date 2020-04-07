@@ -28,7 +28,7 @@ class TestMeanMedian(unittest.TestCase):
             self.assertEqual(expected, actual)
         with self.subTest():
             half = len(test) // 2
-            expected = test[half] + test[half - 1] / 2
+            expected = (test[half] + test[half - 1]) / 2
             actual = m.median(test)
             self.assertEqual(expected, actual)
 
