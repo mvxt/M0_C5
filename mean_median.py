@@ -10,7 +10,7 @@ def median(scores):
 
 if __name__ == '__main__':
     scores = input("Input list of test scores, space-separated: ")
-    scores_list = scores.split()
+    scores_list = [int(i) for i in scores.split()]
 
     mean = mean(scores_list)
     median = median(scores_list)
