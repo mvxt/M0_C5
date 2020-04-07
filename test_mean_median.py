@@ -38,7 +38,7 @@ class TestMeanMedian(unittest.TestCase):
         with self.subTest():
             actual = m.mean(test)
             self.assertEqual(63.2, actual)
-        with self.subTest();
+        with self.subTest():
             actual = m.median(test)
             self.assertEqual(68, actual)
 
