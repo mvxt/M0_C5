@@ -7,9 +7,9 @@ As a teacher, you're tired of manually calculating the median and mean test scor
 - **Mean**: The average of all test scores, taken by summing all elements and then dividing by the total number of elements.
 - **Median**: The middle score. For example, if I have three scores `[1, 23, 83]`, the median score would be 23. If there are an even number of elements `[1, 23, 64, 83]`, the median will be the average of the two middle elements `(23 + 64) / 2 = 43.5`.
 
-### Your Task
-- The `mean(test_scores)` function should return the average of all valid test scores.
-- The `median(test_scores)` function should return the median score of valid test scores.
+### Requirements
+- The `mean(test_scores)` function should return the average of all **valid** test scores.
+- The `median(test_scores)` function should return the median of all **valid** test scores.
 - If there are no valid test scores, return `-1` for both functions. 
 
 The output and input have been written for you. Your only focus is to implement the two functions.
@@ -52,6 +52,9 @@ Median: -1
 ```
 
 You can see here that since all of the `101` scores are above the maximum range, we discarded all of them and were left with nothing. Both functions would return `-1` in this scenario.
+
+## Notes and Hints
+1. Remember that the input could have any valid or invalid scores, but your output should only consider the valid scores.
 
 ## Instructions
 1. Fork this repository to your own account.
