@@ -2,23 +2,20 @@
 Repository with prompt and code for Module 1, Challenge 5: Mean and Median.
 
 ## Prompt
-As a teacher, you're tired of manually calculating the median and mean test scores for your class. You decide to write a program that does this for you based on values you input. As a reminder:
-
-- **Mean**: The average of all test scores, taken by summing all elements and then dividing by the total number of elements.
-- **Median**: The middle score. For example, if I have three scores `[1, 23, 83]`, the median score would be 23. If there are an even number of elements `[1, 23, 64, 83]`, the median will be the average of the two middle elements `(23 + 64) / 2 = 43.5`.
+As a teacher, you're tired of manually calculating the median and mean test scores for your class. You decide to write a program that does this for you based on values you input.
 
 ### Requirements
 - The `mean(test_scores)` function should return the average of all **valid** test scores.
 - The `median(test_scores)` function should return the median of all **valid** test scores.
-- If there are no valid test scores, return `-1` for both functions. 
+- If there are no valid test scores, return `-1` for both functions.
+- For all values returned, you should always **round down** to the nearest integer.
+
+As a reminder:
+
+- **Mean**: The average of all test scores, taken by summing all elements and then dividing by the total number of elements.
+- **Median**: The middle score. For example, if I have three scores `[1, 23, 83]`, the median score would be 23. If there are an even number of elements `[1, 23, 64, 83]`, the median will be the average of the two middle elements `(23 + 64) / 2 = 43.5`. But remember that for the prompt, you are required to round down to the nearest integer. So your function would actually output 43.
 
 The output and input have been written for you. Your only focus is to implement the two functions.
-
-### Assumptions
-- The teacher will always input the list of numbers in the expected format above (e.g. space separated).
-- The input will always be numerically sorted from least to greatest.
-- There is no limit on the total number of test scores. There could be 5... there could be 5000.
-- There is no upper or lower limit on the number of invalid test scores.
 
 ## Examples
 ### Example 1
@@ -41,7 +38,7 @@ Median: 56
 
 This one is a little harder. You can see we have an invalid value, 252. So it should have been discarded and not factored into your calculations.
 
-Subsequently, the actual list of valid scores was only 4 elements, and the average you should have gotten is 55. Since the number of elements is even, we take the average of the two middle scores, `38` and `75`, which yields `56`.
+Subsequently, the actual list of valid scores was only 4 elements, and the average you should have gotten is 55. Since the number of elements is even, we take the average of the two middle scores, `38` and `75`, which yields `56.5`, and you round down to return `56`.
 
 ### Example 3
 ```
@@ -52,6 +49,12 @@ Median: -1
 ```
 
 You can see here that since all of the `101` scores are above the maximum range, we discarded all of them and were left with nothing. Both functions would return `-1` in this scenario.
+
+### Assumptions
+- The teacher will always input the list of numbers in the expected format above (e.g. space separated).
+- The input will always be numerically sorted from least to greatest.
+- There is no limit on the total number of test scores. There could be 5... there could be 5000.
+- There is no upper or lower limit on the number of invalid test scores.
 
 ## Notes and Hints
 1. Remember that the input could have any valid or invalid scores, but your output should only consider the valid scores.

@@ -10,7 +10,7 @@ class TestMeanMedian(unittest.TestCase):
         test = [22, 38, 75, 86, 97]
         with self.subTest():
             actual_mean = m.mean(test)
-            self.assertEqual(63.6, actual_mean)
+            self.assertEqual(63, actual_mean)
         with self.subTest():
             actual_median = m.median(test)
             self.assertEqual(75, actual_median) 
@@ -23,7 +23,7 @@ class TestMeanMedian(unittest.TestCase):
         test.sort()
 
         with self.subTest():
-            expected = reduce(lambda a, b: a + b, test) / len(test)
+            expected = int(reduce(lambda a, b: a + b, test) / len(test))
             actual = m.mean(test)
             self.assertEqual(expected, actual)
         with self.subTest():
@@ -37,7 +37,7 @@ class TestMeanMedian(unittest.TestCase):
         test = [-12, 23, 46, 68, 89, 90, 123, 158]
         with self.subTest():
             actual = m.mean(test)
-            self.assertEqual(63.2, actual)
+            self.assertEqual(63, actual)
         with self.subTest():
             actual = m.median(test)
             self.assertEqual(68, actual)
